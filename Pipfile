@@ -9,6 +9,7 @@ mysqlclient = "*"
 "beautifulsoup4" = "*"
 django-heroku = "*"
 gunicorn = "*"
+"psycopg2-binary" = "*"
 
 [dev-packages]
 
