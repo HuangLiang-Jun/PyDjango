@@ -25,7 +25,7 @@ SECRET_KEY = 'e#3-_jfadvurg#*fzmnr@*da7%exjt=zx-hoick$yh7@7=(w)i'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['https://pydjangocrawler.herokuapp.com/']
 
 
 # Application definition
