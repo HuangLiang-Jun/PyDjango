@@ -3,10 +3,10 @@
 from trips.models import FX
 from django.http import HttpResponse
 import json
-
+import logging
 
 def GetFX(request):
-
+    logging.info('getFX start')
     if request.method == "GET":
         print('GET Method..')
         fx_objs = FX.objects.all()
@@ -26,6 +26,7 @@ def GetFX(request):
             # print("\n")
         
         jsonStr = json.dumps(fx_List)
+        logging.info('getFX end:', jsonStr)
         return HttpResponse(jsonStr, content_type="application/json; charset=utf-8")
     else:
         print(request.header)
