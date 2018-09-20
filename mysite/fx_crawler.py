@@ -31,9 +31,9 @@ from django.http import HttpResponse
 # print('mydb = {0}',mydb)
 
 # cursor = mydb.cursor()
-
+import logging
 def start_crawler(request):
-
+    logging.info('start')
     # 台灣銀行
     page = urllib.request.urlopen('https://rate.bot.com.tw/xrt?Lang=zh-TW')
     html = page.read()#.decode('utf8')
@@ -71,9 +71,10 @@ def start_crawler(request):
                 spot_selling = spot_selling,
                 update_date = update_date
                 )
-        print('save')
+        logging.info('save')
         item.save()
-        print('save2')
+        logging.info('save2')
+
     return HttpResponse('OK')
 
     # item = {'currency_cn': currency_cn,
