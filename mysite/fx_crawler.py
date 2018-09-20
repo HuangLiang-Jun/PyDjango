@@ -71,7 +71,9 @@ def start_crawler(request):
                 spot_selling = spot_selling,
                 update_date = update_date
                 )
+        print('save')
         item.save()
+        print('save2')
     return HttpResponse('OK')
 
     # item = {'currency_cn': currency_cn,

@@ -11,7 +11,7 @@ def hello_world(request):
 
     return render(request, 'hellow_world.html', {
         'current_time': str(datetime.now()),
-        'des': str('hihihi')
+        'des': '999999',
         })
 
 # def fx(request):
