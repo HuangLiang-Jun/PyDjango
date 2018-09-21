@@ -1,11 +1,11 @@
-# PyDjango
+# PyDjango <br/>
 Python 3.7<br/>
-Django 2.1.1<br/>
-###heroku<br/>
+Django 2.1.1<br/><br/>
+### heroku <br/>
 台灣銀行匯率API: https://pydjangocrawler.herokuapp.com/GetFX/
 <br/>
 <br/>
-###JSON格式
+### JSON格式
 <p>{<br/>
     "cn": "美金", 幣別中文<br/>
     "en": "USD",  幣別英文<br/>
