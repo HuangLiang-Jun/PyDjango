@@ -16,11 +16,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from trips.views import hello_world
-from fx_crawler import start_crawler
 import getFx
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('hello/', hello_world),
     path('GetFX/', getFx.GetFX),
-    path('start_crawler/', start_crawler),
 ]

@@ -4,14 +4,14 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from datetime import datetime
 from django.shortcuts import render
-
+from getFx import GetFX
 
 def hello_world(request): 
    
 
     return render(request, 'hellow_world.html', {
         'current_time': str(datetime.now()),
-        'des': '999999',
+        'des': [1,2,3,4],
         })
 
 # def fx(request):

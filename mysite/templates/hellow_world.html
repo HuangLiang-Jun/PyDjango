@@ -12,7 +12,30 @@
         </style>
     </head>
     <body>
-        <h1>Hello World!</h1>
-        <em>{{ current_time }}</em>
+        <table style="width:100%">
+            <tr>
+              <th colspan="2">幣別</th>
+              <th>現金買入</th> 
+              <th>現金賣出</th>
+              <th>即期買入</th>
+              <th>即期賣出</th>
+            </tr>
+            <tr align="center">
+              <td>美金</td>
+              <td>USD</td>
+              <td>Smith</td> 
+              <td>50</td>
+            </tr>
+            <tr align="center">
+              <td>Eve</td>
+              <td>Jackson</td> 
+              <td>94</td>
+            </tr>
+          </table> 
+        <!-- <h1>Hello World!</h1>
+        <em>{{ current_time }}</em> -->
+        {% for i in des %}
+            <p>{{ i }}</p>
+        {% endfor %}
     </body>
 </html>

@@ -11,6 +11,7 @@ class FX(models.Model):
     spot_buying = models.CharField(max_length=20, default=None)
     spot_selling = models.CharField(max_length=20, default=None)
     update_date = models.CharField(max_length=20, default=None)
+    
     class Meta:
         managed = True
         db_table = 'FX'#table name
