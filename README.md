@@ -2,8 +2,8 @@
 Python 3.7<br/>
 Django 2.1.1<br/><br/>
 ### heroku <br/>
-台灣銀行匯率API: https://pydjangocrawler.herokuapp.com/GetFX/
-網頁: https://pydjangocrawler.herokuapp.com/TwBankFx/
+台灣銀行匯率API: https://pydjangocrawler.herokuapp.com/GetFX/<br/>
+網頁: https://pydjangocrawler.herokuapp.com/TwBankFx/<br/>
 <br/>
 <br/>
 ### JSON格式
