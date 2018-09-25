@@ -19,6 +19,6 @@ from trips.views import fx
 import getFx
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('hello/', fx),
+    path('TwBankFx/', fx),
     path('GetFX/', getFx.GetFX),
 ]

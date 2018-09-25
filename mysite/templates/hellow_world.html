@@ -5,14 +5,26 @@
         <style>
             body {
                background-color: lightyellow;
+               
+            }
+            table {
+                width: 100%;
+                border: 3px;
+                padding: 2px;
+                border-style: solid;
+                border-spacing: 5px;
             }
             em {
                 color: LightSeaGreen;
             }
+            th {
+                color: red;
+            }
         </style>
     </head>
     <body>
-        <table style="width:100%">
+        <h1>台灣銀行即時匯率</h1>
+        <table rules="all">
             <tr>
               <th colspan="2">幣別</th>
               <th>現金買入</th> 
@@ -20,16 +32,10 @@
               <th>即期買入</th>
               <th>即期賣出</th>
             </tr>
-            <tr align="center">
-              <td>美金</td>
-              <td>USD</td>
-              <td>Smith</td> 
-              <td>50</td>
-            </tr>
             {% for fx in fx_list %}
             <tr align="center">
-                <td>{{ fx.currency_cn }}</td>
-                <td>{{ fx.currency_en }}</td>
+                <td >{{ fx.currency_cn }}</td>
+                <td >{{ fx.currency_en }}</td>
                 <td>{{ fx.cash_buying }}</td>
                 <td>{{ fx.cash_selling }}</td>
                 <td>{{ fx.spot_buying }}</td>
@@ -37,7 +43,7 @@
             </tr>
             {% endfor %}
           </table> 
-        <h1>Hello World!</h1>
+        <h2>更新時間:{{ update_date }}</h2>
         
     </body>
 </html>
