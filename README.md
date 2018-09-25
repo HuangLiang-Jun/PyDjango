@@ -5,7 +5,6 @@ Django 2.1.1<br/><br/>
 台灣銀行匯率API: https://pydjangocrawler.herokuapp.com/GetFX/<br/>
 網頁: https://pydjangocrawler.herokuapp.com/TwBankFx/<br/>
 <br/>
-<br/>
 ### JSON格式
 <p>{<br/>
     "cn": "美金",  幣別中文<br/>
