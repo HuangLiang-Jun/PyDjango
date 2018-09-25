@@ -12,6 +12,7 @@ import logging
 
 
 # 台灣銀行
+logging.info('crawler info')
 page = urllib.request.urlopen('https://rate.bot.com.tw/xrt?Lang=zh-TW')
 html = page.read()#.decode('utf8')
 # # 以 Beautiful Soup 解析 HTML 程式碼
