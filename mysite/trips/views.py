@@ -5,18 +5,22 @@ from django.http import HttpResponse
 from datetime import datetime
 from django.shortcuts import render
 from getFx import GetFX
+import logging
+import json
+from trips.models import FX
 
-def hello_world(request): 
+# def hello_world(request): 
    
+#     logging.info('hello info')
+#     return render(request, 'hellow_world.html', {
+#         'current_time': str(datetime.now())
+#         })
 
+def fx(request):
+
+    fx_objs = FX.objects.all()
     return render(request, 'hellow_world.html', {
-        'current_time': str(datetime.now()),
-        'des': [1,2,3,4],
+        'fx_list': fx_objs,
         })
 
-# def fx(request):
-#     category = Fx.objects.last()
-#     return render(request, 'hellow_world.html', {
-#         'current_time': str(datetime.now()),
-#         'des': str('hihihi')
-#         })
+

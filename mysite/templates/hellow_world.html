@@ -26,16 +26,18 @@
               <td>Smith</td> 
               <td>50</td>
             </tr>
+            {% for fx in fx_list %}
             <tr align="center">
-              <td>Eve</td>
-              <td>Jackson</td> 
-              <td>94</td>
+                <td>{{ fx.currency_cn }}</td>
+                <td>{{ fx.currency_en }}</td>
+                <td>{{ fx.cash_buying }}</td>
+                <td>{{ fx.cash_selling }}</td>
+                <td>{{ fx.spot_buying }}</td>
+                <td>{{ fx.spot_selling }}</td> 
             </tr>
+            {% endfor %}
           </table> 
-        <!-- <h1>Hello World!</h1>
-        <em>{{ current_time }}</em> -->
-        {% for i in des %}
-            <p>{{ i }}</p>
-        {% endfor %}
+        <h1>Hello World!</h1>
+        
     </body>
 </html>
