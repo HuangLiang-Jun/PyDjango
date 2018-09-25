@@ -20,6 +20,9 @@
             th {
                 color: red;
             }
+            tr {
+                align: center;
+            }
         </style>
     </head>
     <body>
@@ -33,7 +36,7 @@
               <th>即期賣出</th>
             </tr>
             {% for fx in fx_list %}
-            <tr align="center">
+            <tr>
                 <td >{{ fx.currency_cn }}</td>
                 <td >{{ fx.currency_en }}</td>
                 <td>{{ fx.cash_buying }}</td>

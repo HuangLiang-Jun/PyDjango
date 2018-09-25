@@ -20,6 +20,7 @@ def fx(request):
 
     fx_objs = FX.objects.all()
     update_date = fx_objs[0].update_date
+    print("date:",update_date)
     return render(request, 'hellow_world.html', {
         'fx_list': fx_objs,
         'update_date': update_date,

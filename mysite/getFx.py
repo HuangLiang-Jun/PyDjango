@@ -22,7 +22,7 @@ def GetFX(request):
                 'update_date': i.update_date
                 }
 
-            # print(dic)
+            print(dic)
             fx_List.append(dic)
             # print("\n")
         
