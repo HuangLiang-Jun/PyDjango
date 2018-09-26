@@ -20,6 +20,7 @@ soup = BeautifulSoup(html, 'html.parser')
 update_date: str = soup.body.find('span', class_="time").string
    
 all_tr = soup.body.find_all('tr')
+print('all_tr:', all_tr)
 for t in all_tr:
     currency_cn = ''
     currency_en = ''
@@ -45,6 +46,7 @@ for t in all_tr:
             spot_selling = spot_selling,
             update_date = update_date
             )
+    print('item:', item)
     logging.info('server error')
     item.save()
         
