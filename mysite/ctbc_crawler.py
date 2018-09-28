@@ -16,6 +16,8 @@ chrome_exec_shim = "/app/.apt/opt/google/chrome/chrome"
 chrome_options = Options()
 chrome_options.binary_location = chrome_exec_shim
 chrome_options.add_argument("--headless")       # define headless
+chrome_options.add_argument('--disable-gpu')
+chrome_options.add_argument('--no-sandbox')
 driver = webdriver.Chrome(chrome_options=chrome_options)
 
 driver.get(url)
