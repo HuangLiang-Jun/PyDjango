@@ -12,13 +12,13 @@ from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 
 url = 'https://www.ctbcbank.com/CTCBPortalWeb/appmanager/ebank/rb?_nfpb=true&_pageLabel=TW_RB_CM_ebank_018001&_windowLabel=T31400173241287027448950&_nffvid=%2FCTCBPortalWeb%2Fpages%2FexchangeRate%2FexchangeRate.faces&firstView=true'
-chrome_exec_shim = "/app/.apt/opt/google/chrome/chrome"
+chrome_exec_shim = os.environ.get("GOOGLE_CHROME_BIN", "chromedriver")
 chrome_options = Options()
 chrome_options.binary_location = chrome_exec_shim
-chrome_options.add_argument("--headless")       # define headless
+chrome_options.add_argum#ent("--headless")       # define headless
 chrome_options.add_argument('--disable-gpu')
 chrome_options.add_argument('--no-sandbox')
-driver = webdriver.Chrome(chrome_options=chrome_options)
+driver = webdriver.Chrome(executable_path='/app/development/chromedriver', chrome_options=chrome_options)
 
 driver.get(url)
 html = driver.page_source
