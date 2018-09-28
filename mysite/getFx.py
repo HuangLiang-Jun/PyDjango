@@ -10,14 +10,13 @@ def GetFX(request):
     logging.info('getFX start')
     if request.method == "GET":
         fx_List = []
-        for i in FX.objects.all():
-            dic = {'cn': i.currency_cn,
-                'en': i.currency_en,
+        for i in ExchangeRate.objects.all():
+            dic = {'cn': i.currency.currency_cn,
+                'en': i.currency.currency_en,
                 'cash_buying': i.cash_buying,
                 'cash_selling': i.cash_selling,
                 'spot_buying': i.spot_buying,
-                'spot_selling': i.spot_selling,
-                'update_date': i.update_date
+                'spot_selling': i.spot_selling
                 }
 
             fx_List.append(dic)
