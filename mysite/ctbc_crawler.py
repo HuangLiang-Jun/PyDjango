@@ -26,7 +26,7 @@ target = soup.body.find('div', class_="answer")
 ## 匯率更新時間
 update_date: str = soup.body.find('tbody').find_all('td')[-1].string
 update_date = update_date.replace('出表時間：',"")
-bank: Bank = Bank.objects.filter(id = 2)[0]
+bank: Bank = Bank.objects.filter(id = 3)[0]
 
 # update or create
 obj, create = ExchangeRateUpdateTime.objects.update_or_create(
