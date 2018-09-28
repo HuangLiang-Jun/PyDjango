@@ -59,3 +59,10 @@ def addBank(request):
             resultMsg = '儲存成功'
         
         return HttpResponse(resultMsg)
+def getBank(request):
+    banks = Bank.objects.all()
+    
+    return HttpResponse(
+            json.dumps(banks), 
+            content_type="application/json; charset=utf-8"
+            )

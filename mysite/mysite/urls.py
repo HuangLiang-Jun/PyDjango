@@ -23,5 +23,6 @@ urlpatterns = [
     path('TwBankFx/', fx),
     path('GetFX/', GetFX),
     path('add_bank/', addBank),
+    path('get_bank/', getBank),
 ]
 
