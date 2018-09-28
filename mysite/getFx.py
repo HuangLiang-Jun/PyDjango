@@ -16,7 +16,8 @@ def GetFX(request):
                 'cash_buying': i.cash_buying,
                 'cash_selling': i.cash_selling,
                 'spot_buying': i.spot_buying,
-                'spot_selling': i.spot_selling
+                'spot_selling': i.spot_selling,
+                'bank_id': i.bank.bank_id
                 }
 
             fx_List.append(dic)
