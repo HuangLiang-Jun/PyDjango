@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'e#3-_jfadvurg#*fzmnr@*da7%exjt=zx-hoick$yh7@7=(w)i'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['https://pydjangocrawler.herokuapp.com/']
 
