@@ -17,8 +17,8 @@ from trips.models import Bank, Currency, ExchangeRate, ExchangeRateUpdateTime
 #         })
 
 def fx(request):
-    bank1 = Bank.objects.filter(id = 2)[0] #台銀
-    bank2 = Bank.objects.filter(id = 3)[0] #中信
+    bank1 = Bank.objects.filter(id = 1)[0] #台銀
+    bank2 = Bank.objects.filter(id = 2)[0] #中信
     fx_objs1 = ExchangeRate.objects.filter(bank = bank1)
     fx_objs2 = ExchangeRate.objects.filter(bank = bank2)
     tw_update_date = ExchangeRateUpdateTime.objects.filter(bank = bank1)

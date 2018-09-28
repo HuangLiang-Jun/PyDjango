@@ -60,7 +60,12 @@ def addBank(request):
         
         return HttpResponse(resultMsg)
 def getBank(request):
-    banks = Bank.objects.all()
+    banks= []
+    for i in Bank.objects.all():
+        dic = {'id': i.id,
+            'name':i.bank_name,
+            'code':i.bank_code}
+        banks.append(dic)
     
     return HttpResponse(
             json.dumps(banks), 
