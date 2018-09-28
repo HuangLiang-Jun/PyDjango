@@ -18,7 +18,7 @@ html = page.read()#.decode('utf8')
 # # 以 Beautiful Soup 解析 HTML 程式碼
 soup = BeautifulSoup(html, 'html.parser')
 update_date: str = soup.body.find('span', class_="time").string
-bank: Bank = Bank.objects.filter(id = 1)[0]
+bank: Bank = Bank.objects.filter(id = 2)[0]
 obj, create = ExchangeRateUpdateTime.objects.update_or_create(
     bank = bank,
     defaults = {'update_date': update_date})
