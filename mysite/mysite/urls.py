@@ -17,7 +17,7 @@ from django.contrib import admin
 from django.urls import path
 from trips.views import fx
 # import getFx
-from getFx import GetFX, addBank
+from getFx import GetFX, addBank, getBank
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('TwBankFx/', fx),
