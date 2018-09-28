@@ -16,9 +16,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from trips.views import fx
-import getFx
+# import getFx
+from getFx import GetFX, addBank
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('TwBankFx/', fx),
-    path('GetFX/', getFx.GetFX),
+    path('GetFX/', GetFX),
+    path('add_bank/', addBank),
 ]
+

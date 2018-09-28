@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'e#3-_jfadvurg#*fzmnr@*da7%exjt=zx-hoick$yh7@7=(w)i'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['https://pydjangocrawler.herokuapp.com/']
 
@@ -75,15 +75,15 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 import dj_database_url
 DATABASES = {
-    # 'default': {
-    #     'ENGINE': 'django.db.backends.mysql',
-    #     'NAME': 'testdb',
-    #     'USER': 'root',
-    #     'PASSWORD': '123456',
-    #     'HOST':'127.0.0.1',
-    #     'PORT':'3306',
-    # }
-    'default': dj_database_url.config()
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'testdb',
+        'USER': 'root',
+        'PASSWORD': '123456',
+        'HOST':'127.0.0.1',
+        'PORT':'3306',
+    }
+    # 'default': dj_database_url.config()
 
 }
 

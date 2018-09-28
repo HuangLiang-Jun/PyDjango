@@ -35,10 +35,10 @@
               <th>即期買入</th>
               <th>即期賣出</th>
             </tr>
-            {% for fx in fx_list %}
+            {% for fx in tw_bank %}
             <tr>
-                <td >{{ fx.currency_cn }}</td>
-                <td >{{ fx.currency_en }}</td>
+                <td >{{ fx.currency.currency_cn }}</td>
+                <td >{{ fx.currency.currency_en }}</td>
                 <td>{{ fx.cash_buying }}</td>
                 <td>{{ fx.cash_selling }}</td>
                 <td>{{ fx.spot_buying }}</td>
@@ -46,7 +46,28 @@
             </tr>
             {% endfor %}
           </table> 
-        <h2>更新時間:{{ update_date }}</h2>
-        
+        <h2>更新時間:{{ tw_update_date }}</h2>
+        <br>
+        <h1>中國信託即時匯率</h1>
+        <table rules="all">
+            <tr>
+              <th colspan="2">幣別</th>
+              <th>現金買入</th> 
+              <th>現金賣出</th>
+              <th>即期買入</th>
+              <th>即期賣出</th>
+            </tr>
+            {% for fx in ctbc %}
+            <tr>
+                <td >{{ fx.currency.currency_cn }}</td>
+                <td >{{ fx.currency.currency_en }}</td>
+                <td>{{ fx.cash_buying }}</td>
+                <td>{{ fx.cash_selling }}</td>
+                <td>{{ fx.spot_buying }}</td>
+                <td>{{ fx.spot_selling }}</td> 
+            </tr>
+            {% endfor %}
+          </table> 
+        <h2>更新時間:{{ ct_update_date }}</h2>
     </body>
 </html>

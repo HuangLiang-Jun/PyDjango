@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "1108d032357792e69d556a0d70c944ca1bb4c554618286a746c9ceb82644a460"
+            "sha256": "281099072664d54a525ccefd1bce1e0f8442b6e540272cc63038b573d0e9d705"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -141,6 +141,22 @@
                 "sha256:ffb9ef1de172603304d9d2819af6f5ece76f2e85ec10692a524dd876e72bf277"
             ],
             "version": "==2018.5"
+        },
+        "selenium": {
+            "hashes": [
+                "sha256:ab192cd046164c40fabcf44b47c66c8b12495142f4a69dcc55ea6eeef096e614",
+                "sha256:fdb6b1143d8899e8a32e358ad05bf5d89a480dbac359dbbd341592aa8696dcd1"
+            ],
+            "index": "pypi",
+            "version": "==3.14.1"
+        },
+        "urllib3": {
+            "hashes": [
+                "sha256:a68ac5e15e76e7e5dd2b8f94007233e01effe3e50e8daddf69acfd81cb686baf",
+                "sha256:b5725a0bd4ba422ab0e66e89e030c806576753ea3ee08554382c14e685d117b5"
+            ],
+            "markers": "python_version != '3.3.*' and python_version >= '2.6' and python_version != '3.0.*' and python_version != '3.1.*' and python_version < '4' and python_version != '3.2.*'",
+            "version": "==1.23"
         },
         "whitenoise": {
             "hashes": [
