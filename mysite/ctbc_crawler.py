@@ -1,6 +1,6 @@
 
 # 中國信託
-#coding=utf-8
+
 import os, django
 os.environ.setdefault('DJANGO_SETTINGS_MODULE','mysite.settings')
 django.setup()
