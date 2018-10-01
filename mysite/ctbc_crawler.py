@@ -19,6 +19,8 @@ url = 'https://www.ctbcbank.com/CTCBPortalWeb/appmanager/ebank/rb?_nfpb=true&_pa
 GOOGLE_CHROME_BIN = os.environ.get('GOOGLE_CHROME_BIN')
 CHROMEDRIVER_PATH = os.environ.get('CHROMEDRIVER_PATH')
 chrome_options = Options()
+print('GOOGLE_CHROME_BIN',GOOGLE_CHROME_BIN)
+print('CHROMEDRIVER_PATH',CHROMEDRIVER_PATH)
 # chrome_options.binary_location = chrome_exec_shim
 chrome_options.add_argument("--headless")       # define headless
 chrome_options.add_argument('--disable-gpu')
