@@ -1,5 +1,6 @@
 
 # 中國信託
+#coding=utf-8
 import os, django
 os.environ.setdefault('DJANGO_SETTINGS_MODULE','mysite.settings')
 django.setup()
@@ -10,7 +11,9 @@ import re
 from trips.models import Bank,Currency,ExchangeRate,ExchangeRateUpdateTime
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
+import logging
 
+logging.info('shell info')
 url = 'https://www.ctbcbank.com/CTCBPortalWeb/appmanager/ebank/rb?_nfpb=true&_pageLabel=TW_RB_CM_ebank_018001&_windowLabel=T31400173241287027448950&_nffvid=%2FCTCBPortalWeb%2Fpages%2FexchangeRate%2FexchangeRate.faces&firstView=true'
 # chrome_exec_shim = os.environ.get("GOOGLE_CHROME_BIN", "chromedriver")
 GOOGLE_CHROME_BIN = os.environ.get('GOOGLE_CHROME_BIN')
