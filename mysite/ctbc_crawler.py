@@ -23,7 +23,7 @@ chrome_options = Options()
 chrome_options.add_argument('--headless')
 chrome_options.add_argument('--disable-dev-shm-usage')
 chrome_options.add_argument('--no-sandbox')
-chrome_options.binary_location = GOOGLE_CHROME_BIN
+chrome_options.binary_location = '/app/.apt/usr/bin/google-chrome-stable'#GOOGLE_CHROME_BIN
 driver = webdriver.Chrome(chrome_options=chrome_options)
 driver.get(url)
 html = driver.page_source
