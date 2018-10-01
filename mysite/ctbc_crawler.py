@@ -15,22 +15,16 @@ import logging
 
 logging.info('shell info')
 url = 'https://www.ctbcbank.com/CTCBPortalWeb/appmanager/ebank/rb?_nfpb=true&_pageLabel=TW_RB_CM_ebank_018001&_windowLabel=T31400173241287027448950&_nffvid=%2FCTCBPortalWeb%2Fpages%2FexchangeRate%2FexchangeRate.faces&firstView=true'
-# chrome_exec_shim = os.environ.get("GOOGLE_CHROME_BIN", "chromedriver")
+
 GOOGLE_CHROME_BIN = os.environ.get('GOOGLE_CHROME_BIN')
-CHROMEDRIVER_PATH = os.environ.get('CHROMEDRIVER_PATH')
+# CHROMEDRIVER_PATH = os.environ.get('CHROMEDRIVER_PATH')
 chrome_options = Options()
-print('GOOGLE_CHROME_BIN',GOOGLE_CHROME_BIN)
-print('CHROMEDRIVER_PATH',CHROMEDRIVER_PATH)
-# chrome_options.binary_location = chrome_exec_shim
+
 chrome_options.add_argument('--headless')
 chrome_options.add_argument('--disable-dev-shm-usage')
 chrome_options.add_argument('--no-sandbox')
-
-path_of_chrome_driver = '/app/.chromedriver/bin/chromedriver'
 chrome_options.binary_location = GOOGLE_CHROME_BIN
-
-driver = webdriver.Chrome(chrome_options=chrome_options)
-
+driver = webdriver.Chrome()
 driver.get(url)
 html = driver.page_source
 driver.close()
