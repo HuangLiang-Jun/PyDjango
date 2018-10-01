@@ -22,15 +22,15 @@ chrome_options = Options()
 print('GOOGLE_CHROME_BIN',GOOGLE_CHROME_BIN)
 print('CHROMEDRIVER_PATH',CHROMEDRIVER_PATH)
 # chrome_options.binary_location = chrome_exec_shim
-chrome_options.add_argument('--headless')       # define headless
+chrome_options.add_argument('--headless')
 chrome_options.add_argument('--disable-dev-shm-usage')
 chrome_options.add_argument('--no-sandbox')
 
 path_of_chrome_driver = '/app/.chromedriver/bin/chromedriver'
 chrome_options.binary_location = GOOGLE_CHROME_BIN
 
-driver = webdriver.Chrome(executable_path=path_of_chrome_driver, chrome_options=chrome_options)
-service_args=["--verbose", "--log-path=D:\\qc1.log"])
+driver = webdriver.Chrome(chrome_options=chrome_options,service_args=["--verbose", "--log-path=D:\\qc1.log"])
+
 driver.get(url)
 html = driver.page_source
 driver.close()
