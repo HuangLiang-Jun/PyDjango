@@ -29,7 +29,7 @@ chrome_options.add_argument('--no-sandbox')
 # path_of_chrome_driver = '/app/.chromedriver/bin/chromedriver'
 chrome_options.binary_location = GOOGLE_CHROME_BIN
 
-driver = webdriver.Chrome(executable_path=CHROMEDRIVER_PATH, chrome_options=chrome_options)
+driver = webdriver.Chrome(executable_path="chromedriver", chrome_options=chrome_options)
 
 driver.get(url)
 html = driver.page_source
