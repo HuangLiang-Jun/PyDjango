@@ -30,7 +30,7 @@ path_of_chrome_driver = '/app/.chromedriver/bin/chromedriver'
 chrome_options.binary_location = GOOGLE_CHROME_BIN
 
 driver = webdriver.Chrome(executable_path=path_of_chrome_driver, chrome_options=chrome_options)
-
+service_args=["--verbose", "--log-path=D:\\qc1.log"])
 driver.get(url)
 html = driver.page_source
 driver.close()
