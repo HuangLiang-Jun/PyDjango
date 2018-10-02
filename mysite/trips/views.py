@@ -42,7 +42,7 @@ def fx(request):
         'tw_bank' : fx_objs1,
         'ctbc' : fx_objs2,
         'tw_update_date' : tw_update_date[0].update_date,
-        'ct_update_date' : 'NO',#ctb_update_date[0].update_date,
+        'ct_update_date' : ctb_update_date[1].update_date,
         })
 
 
