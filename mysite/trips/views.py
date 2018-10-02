@@ -30,6 +30,7 @@ def fx(request):
         fx_objs2 = ExchangeRate.objects.filter(bank = bank2)
         tw_update_date = ExchangeRateUpdateTime.objects.filter(bank = bank1)
         ctb_update_date = ExchangeRateUpdateTime.objects.filter(bank = bank2)
+        print(ctb_update_date[0].update_date)
     except:
         bank1 = []
         bank2 = []
@@ -42,7 +43,7 @@ def fx(request):
         'tw_bank' : fx_objs1,
         'ctbc' : fx_objs2,
         'tw_update_date' : tw_update_date[0].update_date,
-        'ct_update_date' : ctb_update_date[1].update_date,
+        'ct_update_date' : ctb_update_date[0].update_date,
         })
 
 
