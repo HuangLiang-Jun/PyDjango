@@ -30,7 +30,6 @@ driver.close()
 
 ## 以 Beautiful Soup 解析 HTML 程式碼
 soup = BeautifulSoup(html, 'html.parser')
-
 target = soup.body.find('div', class_="answer")
 
 ## 匯率更新時間
