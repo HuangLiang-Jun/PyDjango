@@ -22,6 +22,7 @@ driver.get(url)
 html = driver.page_source
 driver.close()
 
+
 ## 以 Beautiful Soup 解析 HTML 程式碼
 soup = BeautifulSoup(html, 'html.parser')
 
