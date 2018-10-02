@@ -12,19 +12,12 @@ from trips.models import Bank,Currency,ExchangeRate,ExchangeRateUpdateTime
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 import logging
-
 logging.info('shell info')
 url = 'https://www.ctbcbank.com/CTCBPortalWeb/appmanager/ebank/rb?_nfpb=true&_pageLabel=TW_RB_CM_ebank_018001&_windowLabel=T31400173241287027448950&_nffvid=%2FCTCBPortalWeb%2Fpages%2FexchangeRate%2FexchangeRate.faces&firstView=true'
 
-GOOGLE_CHROME_BIN = os.environ.get('GOOGLE_CHROME_BIN')
-# CHROMEDRIVER_PATH = os.environ.get('CHROMEDRIVER_PATH')
-chrome_options = Options()
-
-chrome_options.add_argument('--headless')
-chrome_options.add_argument('--disable-dev-shm-usage')
-chrome_options.add_argument('--no-sandbox')
-chrome_options.binary_location = '/app/.apt/usr/bin/google-chrome-stable'#GOOGLE_CHROME_BIN
-driver = webdriver.Chrome(chrome_options=chrome_options)
+options = webdriver.FirefoxOptions()
+options.add_argument('-headless')
+driver =  webdriver.Firefox(options=options)
 driver.get(url)
 html = driver.page_source
 driver.close()
