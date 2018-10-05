@@ -23,6 +23,13 @@ Django 2.1.1<br/><br/>
  | update_at | str        | 匯率更新時間   |
  | data      | list       | 匯率          |
 
+| Header Cell | Header Cell | Header Cell |
+| ------------- | ------------- | ------------- |
+| Content Cell | Content Cell | Content Cell |
+| Content Cell | Content Cell | Content Cell |
+| Content Cell | Content Cell | Content Cell |
+| Content Cell | Content Cell | Content Cell |
+
 ### 銀行列表API <br/>
 https://goo.gl/9HFsYH <br/>
 <p>{ <br/>
