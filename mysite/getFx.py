@@ -8,7 +8,7 @@ from django.core import serializers
 logging.debug(__name__)
 def GetFX(request):
     if request.method == "GET":
-        fx_dict = {}
+        fx_dict = []
         
         bankObjs = Bank.objects.all()
         if len(bankObjs) == 0:
@@ -39,12 +39,12 @@ def GetFX(request):
                 except :
                     update_at = '---'
 
-                fx_dict[code] = {'bank_id': i.id,
+                fx_dict.append({'bank_id': i.id,
                                 'bank_name' : i.bank_name, 
                                 'bank_code': code,
                                 'update_at': update_at,
                                 'data': tmp_list
-                                }
+                                })
                 
         return HttpResponse(
             json.dumps(fx_dict), 
