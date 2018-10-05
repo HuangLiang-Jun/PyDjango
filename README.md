@@ -17,11 +17,11 @@ Django 2.1.1<br/><br/>
 } </p>
  | Key | 類型 | 描述 |   
  |:--------:|:-----------:|:-----------:|
- | bank_id  | int         | 銀行id       | 
- | bank_name | str        | 銀行名稱      |
- | bank_code | str        | 銀行代碼      |
- | update_at | str        | 匯率更新時間   |
- | data      | list       | 匯率          |
+ | bank_id | int | 銀行id | 
+ | bank_name | str | 銀行名稱 |
+ | bank_code | str | 銀行代碼 |
+ | update_at | str | 匯率更新時間 |
+ | data      | list | 匯率 |
 
 | Header Cell | Header Cell | Header Cell |
 | ------------- | ------------- | ------------- |
