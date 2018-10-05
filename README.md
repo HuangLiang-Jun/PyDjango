@@ -16,6 +16,8 @@ Django 2.1.1<br/><br/>
     "bank_id": 2  銀行id <br/>
 } </p>
 
+### res:
+
 | Key | 類型 | 描述 |   
 | :-------------: | :-------------: | :-------------: |
 | bank_id | int | 銀行id | 
@@ -24,18 +26,24 @@ Django 2.1.1<br/><br/>
 | update_at | str | 匯率更新時間 |
 | data      | list | 匯率 |
 
-| Header Cell | Header Cell | Header Cell |
-| ------------- | ------------- | ------------- |
-| Content Cell | Content Cell | Content Cell |
-| Content Cell | Content Cell | Content Cell |
-| Content Cell | Content Cell | Content Cell |
-| Content Cell | Content Cell | Content Cell |
+### data Info:
+
+| Key | 類型 | 描述 |
+| :-------------: | :-------------: | :-------------: |
+| cn | str | 貨幣中文 |
+| en | str | 貨幣英文 |
+| cash_buying | str | 銀行現金買入 |
+| cash_selling | str | 銀行現金賣出 |
+| spot_buying | str | 銀行即期買入 |
+| spot_selling | str | 銀行即期賣出 |
+
 
 ### 銀行列表API <br/>
 https://goo.gl/9HFsYH <br/>
-<p>{ <br/>
-       "id": 1, 銀行ID <br/>
-       "name": "國泰世華", 銀行名稱 <br/>
-       "code": "013" 銀行代碼<br/>
-    }<p>
 
+
+| Key | 類型 | 描述 |
+| :-------------: | :-------------: | :-------------: |
+| id | int | 銀行ID |
+| name | str | 銀行名稱 |
+| code | str | 銀行代碼 |
