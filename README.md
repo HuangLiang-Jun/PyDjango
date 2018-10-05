@@ -19,8 +19,8 @@ Django 2.1.1<br/><br/>
 ### 銀行列表API <br/>
 https://goo.gl/9HFsYH <br/>
 <p>{ <br/>
-       "id": 1, <br/>
-       "name": "國泰世華 ", <br/>
-       "code": "013" <br/>
+       "id": 1, 銀行ID <br/>
+       "name": "國泰世華", 銀行名稱 <br/>
+       "code": "013" 銀行代碼<br/>
     }<p>
 
