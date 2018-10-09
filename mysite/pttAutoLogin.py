@@ -28,10 +28,11 @@ def pttLogin(account, pwd):
 
 
 kids_json = os.environ.get('Kids', None)
-print(kids_json)
-for acc in account_list:
-    u = acc['user']
-    p = acc['pwd']
+# print(kids_json)
+for kid in kids_json:
+    u = kid['user']
+    p = kid['pwd']
+    print(u,p)
     # pttLogin(u, p)
         
 
