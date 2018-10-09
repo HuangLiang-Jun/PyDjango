@@ -12,6 +12,7 @@ def pttLogin(account, pwd):
     time.sleep(1)
     content = telnet.read_very_eager().decode('big5', 'ignore')
     pttStatus(content, account, pwd)
+
     # if "請輸入代號" in content:
     #     print('entering account')
     #     telnet.write((account + "\r\n").encode('big5'))
@@ -55,7 +56,7 @@ def pttLogin(account, pwd):
         #             time.sleep(2)
         #             content = telnet.read_very_eager().decode('big5','ignore')
 
-def pttStatus(telnet, u, p):
+def pttStatus(telnet: Telnet, u, p):
     content = telnet.read_very_eager().decode('big5','ignore')
     if "請輸入代號" in content:
         telnet.write((u + "\r\n").encode('big5'))
