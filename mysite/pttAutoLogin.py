@@ -59,14 +59,17 @@ def pttLogin(account, pwd):
 def pttStatus(telnet, u, p):
     content = telnet.read_very_eager().decode('big5','ignore')
     if "請輸入代號" in content:
+        print('請輸入代號...')
         telnet.write((u + "\r\n").encode('big5'))
         time.sleep(1)
         pttStatus(telnet, u, p)
     elif "請輸入您的密碼" in content:
+        print('請輸入您的密碼...')
         telnet.write((p + "\r\n").encode('big5'))
         time.sleep(1)
         pttStatus(telnet, u, p)
     elif "您想刪除其他重複登入的連線嗎" in content:
+        print('您想刪除其他重複登入的連線嗎...')
         telnet.write(("n\r\n").encode('big5'))
         time.sleep(1)
         pttStatus(telnet, u, p)
@@ -74,6 +77,7 @@ def pttStatus(telnet, u, p):
         telnet.write(("\r\n").encode('big5'))
         print('login finish.')
     elif "登入中，請稍候..." in content:
+        print('登入中，請稍候...')
         time.sleep(2)
         pttStatus(telnet, u, p)
 
