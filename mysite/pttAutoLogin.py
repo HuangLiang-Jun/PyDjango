@@ -46,6 +46,9 @@ def pttLogin(account, pwd):
                 content = telnet.read_very_eager().decode('big5','ignore')
             else:
                 print('other: ', content)
+                sleep(2)
+                content = telnet.read_very_eager().decode('big5','ignore')
+                print('other 2:', content)
 
 kids_json = os.environ.get('Kids', None)
 kids_dict = json.loads(kids_json)
