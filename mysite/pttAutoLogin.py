@@ -11,7 +11,7 @@ def pttLogin(account, pwd):
     telnet = telnetlib.Telnet(host)
     time.sleep(1)
     content = telnet.read_very_eager().decode('big5', 'ignore')
-    pttStatus(content, account, pwd)
+    pttStatus(telnet, account, pwd)
 
     # if "請輸入代號" in content:
     #     print('entering account')
