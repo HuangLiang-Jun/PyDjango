@@ -80,6 +80,9 @@ def pttStatus(telnet, u, p):
         print('登入中，請稍候...')
         time.sleep(2)
         pttStatus(telnet, u, p)
+    else:
+        print('????: ', content)
+
 
 
 kids_json = os.environ.get('Kids', None)
