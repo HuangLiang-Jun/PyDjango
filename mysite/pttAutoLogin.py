@@ -28,7 +28,7 @@ def pttLogin(account, pwd):
 
 
 kids_json = os.environ.get('Kids', None)
-print(type(kids_json))
+print(kids_json)
 kids_dict = json.loads(kids_json)
 print(kids_dict)
 for kid in kids_dict:
@@ -38,4 +38,3 @@ for kid in kids_dict:
 
     # pttLogin(u, p)
         
-
