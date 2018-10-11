@@ -3,3 +3,4 @@
 
 import fx_crawler
 import ctbc_crawler
+import tcbBank
