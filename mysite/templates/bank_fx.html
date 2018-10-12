@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+	    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+	    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+        <title>銀行匯率</title>
+        <style>
+                body {
+                   background-color: skyblue;  
+                }
+                table {
+                    margin-left: 20px;
+                    width: 95%;
+                    border: 3px;
+                    padding: 2px;
+                    border-spacing: 5px;
+                }
+                em {
+                    color: LightSeaGreen;
+                }
+                th {
+                    color: black;
+                    font-size: 20px;
+                }
+                tr {
+                    align: center;
+                }
+                label {
+                    padding-left: 20px;
+                }
+                select {
+                    margin-left: 20px;
+                }
+                
+        </style>
+    </head>
+    <body>
+        <div class="form-group col-md-2">
+            <label for="exampleFormControlSelect1">選銀行</label>
+            <select class="form-control" id="dropdown">
+                {% for f in fx %}
+                <option bank-id="{{ f.bank_id }}">{{ f.bank_name }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        {% for f in fx %}
+            {%if f.bank_id == 2%}
+        <table rules="all">
+            <tr>
+                <th colspan="2">幣別</th>
+                <th>現金買入</th> 
+                <th>現金賣出</th>
+                <th>即期買入</th>
+                <th>即期賣出</th>
+            </tr>
+            
+            <tbody id="fxInfo">
+                {% for i in f.data %}
+                    <tr>
+                        <td >{{ i.cn }}</td>
+                        <td >{{ i.en }}</td>
+                        <td>{{ i.cash_buying }}</td>
+                        <td>{{ i.cash_selling }}</td>
+                        <td>{{ i.spot_buying }}</td>
+                        <td>{{ i.spot_selling }}</td> 
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <p id="dateTime" style="padding-left: 20px;font-size: 18px;">{{f.update_at}} </p>
+            {%endif%}
+        {% endfor %}
+    </body>
+    
+    <script>
+        $('#dropdown').change(function(){
+            var val = $(this).find('option:selected').attr('bank-id');
+            console.log()
+            $.ajax({url: '/FxOfBank/',
+                    method: "GET",
+                    dataType: 'json',
+                    data: {'bank_id': val},
+                    success: function(response){
+                        console.log(response)
+                        $('#fxInfo').empty()
+                        var fxObjs = response['fx'];
+                        var updateTime = response['updateTime'];
+                        for (i = 0; i < fxObjs.length;i++){
+
+                            var obj = fxObjs[i]
+                            $('#fxInfo').append('<tr><td>' + obj.cn + '</td>' + '<td>' + obj.en + '</td>' + '<td>' + obj.cash_buying + '</td>' + '<td>' + obj.cash_selling + '</td>' + '<td>' + obj.spot_buying + '</td>' + '<td>' + obj.spot_selling + '</td></tr>')
+                        }
+
+                        $('#dateTime').empty()
+                        $('#dateTime').append('更新時間: ' + updateTime)
+                    }
+                });
+        });
+        
+    </script>
+</html>

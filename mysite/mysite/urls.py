@@ -15,14 +15,17 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from trips.views import fx
-# import getFx
+from trips.views import fx, bankFx, getFxOfBank
 from getFx import GetFX, addBank, getBank
+
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('TwBankFx/', fx),
     path('GetFX/', GetFX),
     path('add_bank/', addBank),
     path('get_bank/', getBank),
+    path('bankfx/', bankFx),
+    path('FxOfBank/', getFxOfBank)
 ]
 
