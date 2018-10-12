@@ -78,11 +78,11 @@
             {%endif%}
         {% endfor %}
     </body>
-    
+
     <script>
+
         $('#dropdown').change(function(){
             var val = $(this).find('option:selected').attr('bank-id');
-            console.log()
             $.ajax({url: '/FxOfBank/',
                     method: "GET",
                     dataType: 'json',

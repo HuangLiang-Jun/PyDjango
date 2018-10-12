@@ -2,7 +2,7 @@
 Python 3.7<br/>
 Django 2.1.1<br/><br/>
 ### heroku <br/>
-網頁: https://goo.gl/9gdQsM<br/>
+網頁: https://goo.gl/6kGYfF<br/>
 
 ***
 
