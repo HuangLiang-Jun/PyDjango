@@ -9,6 +9,7 @@ import re
 from trips.models import Bank, Currency, ExchangeRate, ExchangeRateUpdateTime
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
+
 import logging
 logging.info('shell info')
 
