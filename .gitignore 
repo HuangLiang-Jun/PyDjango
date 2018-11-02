@@ -116,6 +116,7 @@ dmypy.json
 ### Python Patch ###
 .venv/
 
+
 ### Python.VirtualEnv Stack ###
 # Virtualenv
 # http://iamzed.com/2009/05/07/a-primer-on-virtualenv/
@@ -128,5 +129,14 @@ dmypy.json
 pyvenv.cfg
 pip-selfcheck.json
 
+*.log
 
 # End of https://www.gitignore.io/api/python
+
+
+### VisualStudioCode ###
+.vscode/*
+# !.vscode/settings.json
+# !.vscode/tasks.json
+# !.vscode/launch.json
+# !.vscode/extensions.json
