@@ -62,7 +62,5 @@ kids_json = os.environ.get('Kids', None)
 kids_dict = json.loads(kids_json)
 
 for kid in kids_dict:
-    u = kid['user']
-    p = kid['pwd']
-    pttLogin(u, p)
+    pttLogin(kid['user'], kid['pwd'])
 
